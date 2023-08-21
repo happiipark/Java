@@ -12,13 +12,21 @@ JVM은 자바 실행 환경 JRE(Java Runtime Enviromment)에 포함
 
 -> **JVM을 사용하면 하나의 바이트 코드(.class)로 모든 플랫폼에서 동작 가능**
 
+<img src = "https://github.com/happiipark/Java/assets/124240328/4b107b07-5436-4b7e-961f-1114ff8e53e1" width="500" height="400"/>
+
 ### JVM의 OS에서의 실행 과정
 
-1. 자바 소스코드인 .java 파일을 컴파일러가 자바 바이트 코드인 .class로 변환
-2. .class 코드를 JVM의 클래스 로도에게 보냅니다.
-3. 클래스 토더는 JVM 런타임 데이터 영역으로 로딩하여 JVM의 메모리에 올린다.
+<img src = "https://github.com/happiipark/Java/assets/124240328/434e8337-e242-4a58-bfae-ed31b49ffaec" width="700" height="500"/>
 
-![jvm 동작과정](https://github.com/happiipark/Java/assets/124240328/434e8337-e242-4a58-bfae-ed31b49ffaec)
+1. 자바로 개발된 프로그램을 실행하면 JVM은 OS로부터 메모리를 할당
+2. 자바 컴파일러가(.javac)가 자바 소스코드(.java)를 자바 바이트코드(.class)로 컴파일
+3. Class Loader를 통해 JVM Runtime Data Area로 로딩
+4. Runtime Data Area에 로딩 된 .class들은 Execution Engine을 통해 해석
+5. 해석된 바이트코드는 Runtime Data Area의 각 영역에 배치되어 수행하며 이 과정에서 Execution에 의해 GC의 작동과 스레드 동기화가 이루어짐
+
+**모든 자바 프로그램은 JVM을 통해 실행, 일단 프로그램이 실행되면 JVM은 OS로 부터 프로그램을 수행하는데 필요한 메모리를 할당받는다**
+
+-> 이 메모리를 가지고 JVM은 용도에 따라 구분해서 사용
 
 ---
 
