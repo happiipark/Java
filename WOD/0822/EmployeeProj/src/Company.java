@@ -63,8 +63,7 @@ public class Company {
 
         com.allEmployeeInfo();
         System.out.println("총급여액 : " + com.getTotalPay());
-    }  
-
+    }
 }
 
 // 사번 : 10001, 이름 : 홍길동, 부서 : 홍보부, 급엽 : 6000000
