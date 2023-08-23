@@ -1,12 +1,14 @@
+package KOSTA._0823;
+
 public class ShapeMain {
 	public static void main(String[] args) {
 		ShapeSet ss = new ShapeSet();
 		ss.add(new Circle("red",10,10,20));
-//		ss.add(new Circle("pink",new Point(5,5),10));
-//		ss.add(new Triangle("blue",new Point(5,5),new Point(10,5),new Point(15,30)));
-//		ss.add(new Triangle("sky",3,3,5,5,7,7));
-//		ss.add(new Rectangle("green",30,30,100,50));
-//		ss.add(new Rectangle("yellow",new Point(5,5),30,15));
+		ss.add(new Circle("pink",new Point(5,5),10));
+		ss.add(new Triangle("blue",new Point(5,5),new Point(10,5),new Point(15,30)));
+		ss.add(new Triangle("sky",3,3,5,5,7,7));
+		ss.add(new Rectangle("green",30,30,100,50));
+		ss.add(new Rectangle("yellow",new Point(5,5),30,15));
 		ss.allShapeDraw();
 	}
 }
