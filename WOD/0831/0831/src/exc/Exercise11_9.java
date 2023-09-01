@@ -85,22 +85,24 @@ class Exercise11_9 {
 
 		for (int i = 0; i < length; i++) {
 			Student s = (Student) list.get(i);
+			System.out.print("지금사람 반 : " + s.ban);
+			System.out.println(",   전사람 반  : " + prevBan);
 			if (s.ban != prevBan) {
-				prevRank = 0;
-				prevTotal = 0;
+				prevRank = 1;
+				prevTotal = 1;
 				if (s.total == prevTotal) {
 					s.classRank = prevRank;
 				} else if (s.total != prevTotal) {
-					s.classRank = i + 1;
+					s.classRank = s.classRank + 1; 
 				}
-			} else {
+			} else if (s.ban == prevBan) {
 				if (s.total == prevTotal) {
 					s.classRank = prevRank;
 				} else if (s.total != prevTotal) {
-					s.classRank = i + 1;
+					s.classRank = prevRank + 1;
 				}
 			}
-			
+
 			prevBan = s.ban;
 			prevTotal = s.total;
 			prevRank = s.classRank;
