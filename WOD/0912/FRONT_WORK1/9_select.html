@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action = "test.html">
+        <select name="food" id="">
+            <!-- select 에 name을 정해주고 안에  option에다가 실제 값 value를 따로 정해준다 -->
+            <option value="kimbab">김밥</option>
+            <option value="dduck">떡볶이</option>
+            <option value="soon">순대</option>
+            <option value="fishcake">어묵</option>
+        </select>
+        <input type = "submit">
+    </form>
+    <br>
+    <form action="test2.html">
+        <select name="food2" id="" multiple>
+            <!-- multiple : 여러개 선택 기능 -->
+            <option value="jjajang">짜장</option>
+            <option value="jjamppong">짬뽕</option>
+            <option value="tangsuyuck">탕수육</option>
+            <option value="gganponggi">깐풍기</option>
+        </select>
+        <input type = "submit">
+    </form>
+
+    <select name="" id="">
+        <optgroup label="HTML5">
+            <!-- optgroup 선택지를 그룹으로 만드는 것 (구분하기 쉽게?) -->
+            <option value="">Multimeda Tag</option>
+            <option value="">Connectivity</option>
+            <option value="">Device Access</option>
+        </optgroup>
+        <optgroup label="CSS3">
+            <option value="">Animation</option>
+            <option value="">3D Trasform</option>
+        </optgroup>
+    </select>
+</body>
+</html>

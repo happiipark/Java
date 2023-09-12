@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8_img_audio_video.html</title>
+</head>
+<body>
+    <img src = "lazy.png" alt = "지렁이" width="250"> <br><!-- img src 를 사용하여 불러오고자 하는 파일의 파일명 입력 , alt는 src로 읽어 오지 못할경우 대비 파일 설정 -> 잘 불러올 경우 alt는 읽지 않는다  -->
+    <audio src = "Kalimba.mp3" controls = "controls"></audio> <br>
+    <!-- <video src = "Wildlife.mp4" type = "video/mp4" width="250" controls = "controls"></video> -->
+    <video witdh = "320" controls = "controls" poster="http://placehold.it/320x180">
+        <source src = "Wildlife.mp4" type="video/mp4">
+        <source src = "Wildlife.webm" type="video/webm">
+    </video>
+</body>
+</html>
