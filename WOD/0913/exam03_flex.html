@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.container{
+            display: flex;
+            /* flex, inline-flex */
+            flex-direction: row;
+            /* row, column, row-reverse, column-reverse */
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            /* flex-start, flex-end, center, space-between, space-around, space-evenly  
+            flex 항목 내 수평(가로) 정렬*/
+            border: 1px solid black;
+        }
+        div.item {
+            margin: 3px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+
+        div.container2{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            /* align-items : stretch, flex-start, flex-end, center, space-bewteen, space-around, space-evenly 
+            flex 항목 내 수직(세로) 정렬 */
+            border: 1px solid black;
+        }
+        .item2 {
+            border: 1px solid black;
+            width: 150px;
+
+        }
+
+        div.container3{
+            display: flex;
+            border: 1px solid black;
+        }
+
+        .item3{
+            /* flex-grow: 1; */
+            /* flex-grow : 비율 설정 */
+            border: 1px solid black;
+        }
+
+        .item3:nth-child(1){
+            flex-shrink: 0;
+            /* flex-shrink : width를 부여해서 고정 비율(사이즈) 설정*/
+            width: 100px;
+            /* flex-grow: 1; */
+        }
+        .item3:nth-child(2){
+            flex-grow: 2;
+        }
+        .item3:nth-child(3){
+            flex-grow: 2;
+        }
+
+        div.container4{
+            display: flex;
+            flex-wrap: wrap;
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .item4{
+            flex: 1 1 40%;
+            /* flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 0; */
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Hello Flex,Hello Flex,Hello Flex,Hello Flex</div>
+        <div class="item">Flex,Flex,Flex,Flex</div>
+        <div class="item">Hello,Hello,Hello,Hello</div>
+    </div>
+
+    <div class = "container2">
+        <label for="" class="item2">label</label>
+        <!-- label은 원래 width같은 사이즈 조절이 불가능 하지만
+        flex 내에 들어갈 경우는 조절이 가능해진다 -> flex내 블럭들은 사이즈 조절이 가능해진다!! -->
+        <h3 class="item2">hogn gil dong</h3>
+        <p class="item2">seoul gumcheon</p>
+        <h1 class="item2">title</h1>
+    </div>
+<br>
+    <div class="container3">
+        <div class="item3">ITEM</div>
+        <div class="item3">ITEM</div>
+        <div class="item3">ITEM</div>
+        <!-- <div class="item3">ITEM</div>
+        <div class="item3">ITEM</div>
+        <div class="item3">ITEM</div>
+        <div class="item3">ITEM</div>
+        <div class="item3">ITEM</div>
+        <div class="item3">ITEM</div>
+        <div class="item3">ITEM</div> -->
+    </div>
+    <br>
+    <div class="container4">
+        <div class="item4">ITEM</div>
+        <div class="item4">ITEM</div>
+        <div class="item4">ITEM</div>
+        <div class="item4">ITEM</div>
+        <div class="item4">ITEM</div>
+        <div class="item4">ITEM</div>
+        <div class="item4">ITEM</div>
+        <div class="item4">ITEM</div>
+        <div class="item4">ITEM</div>
+        <div class="item4">ITEM</div>
+    </div>
+</body>
+</html>

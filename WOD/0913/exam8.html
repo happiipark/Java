@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1,p {
+        width: 300px;
+        }
+
+        .ellipsis{
+            white-space: nowrap;
+            /* white-space: nowrap; : 텍스트가 길어서 부모 요소 안의 
+            가로폭을 넘어가더라도 자동으로 줄바꿈이 일어나게 
+            하고 싶지 않은 경우가 있는데요. 
+            이럴 때는 white-space 속성을 nowrap으로 설정 */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /* text-overflow: ellipsis; : 글자가 잘리면 ... 으로 나오게끔 */
+        }
+    </style>
+</head>
+<body>
+    <h1 class="ellipsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus inventore ad quia laborum quidem sunt minima voluptate laudantium, nulla deleniti ipsam? Fugiat commodi magnam, veritatis hic doloribus explicabo ex? Impedit.</h1>
+    <p class="ellipsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum minus reprehenderit incidunt autem, velit necessitatibus soluta praesentium tempora, ullam quae atque amet distinctio nobis nihil quisquam cum? Soluta, odio voluptatibus.</p>
+</body>
+</html>

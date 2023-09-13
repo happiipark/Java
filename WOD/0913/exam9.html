@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #top{
+            width: 1000px;
+            height: 200px;
+            position: absolute;
+            overflow: hidden;
+            display: block;
+            /* display: flex;
+            flex-grow: initial;
+            flex-wrap: wrap;
+            flex-grow: 1; */
+        }
+
+        #middle{
+            float: left;
+            flex-direction: row;
+            position: absolute;
+            top: 170px;
+            display: flex;
+        }
+        /* #bottom{
+        } */
+
+
+        .ttop{
+            width: 1000px;
+            background-color: orange;
+            color: white;
+            display: block;
+            text-align: center;
+            
+        }
+        .betweentopandmiddle{
+            width: 1000px;
+            display: block;
+            background-color: rgba(142, 135, 135, 0.543);
+            color: black;
+            text-align: center;
+        }
+
+
+        .mleft{ /* 미들의 왼쪽 */
+            flex-grow: 1;
+            float: left;
+        }
+
+
+        .mmiddle{ /* 미들의 중간 */
+            
+            background-color: rgb(199, 196, 196);
+            flex-grow: 3;
+            /* float: left; */
+        }
+
+        .content{
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .subtitle{
+
+            background-color: rgb(3, 3, 58);
+            color: gray;
+            font: bold;
+        }
+
+        .name{
+            font: bold;
+        }
+        .mright{ /* 미들의 오른쪽 */
+            flex-grow: 1;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div id="top">
+        <div class="ttop">
+            <h1>Musée d'Orsay</h1>
+            <p><b>Musée d'OrsayMusée d'OrsayMusée d'OrsayMusée d'OrsayMusée d'Orsay</b></p>
+        </div>
+        <div class="betweentopandmiddle">
+            <p>Royal Acadmey of Arts, THE REAL VANGOGH THE ARTIST AND HIS LETTERS</p>
+        </div>
+    </div>
+    <div id="middle">
+        <div class="mleft">
+            <p style="height: 30px;;background-color: rgba(166, 5, 5, 0.851); color: white;"><b>ARTIST</b></p><br>
+        <div>
+            <p><a href="https://www.musee-orsay.fr/en/ressources/artists-personalities-catalog/vincent-van-gogh-35879">작가의 작품</a></p><br>
+            <p><a href="">작가의 시대</a></p><br>
+            <p><a href="">작가의 일생</a></p>
+        </div>
+        </div>
+        <div class="mmiddle">
+            <div class="content">
+                <p class="subtitle">피리부는 소년</p>
+                <p class="name">에두아마르네</p>
+                <p>에두아르 마네, <피리부는 소년>, 캔버스에 유채, 161 x 97 cm, 1866, 오르세미술관 소장.</p>
+            </div>
+            <div class="content">
+                <p class="subtitle">고흐의 방</p>
+                <p class="name">빈센트 반고흐</p>
+                <p>기법       :  캔버스에 유채(Oil on canvas)</p>
+                <p>크기       :  57.5 x 74cm</p>
+                <p>소장처    :  파리 오르세 미술관</p>
+            </div>
+            <div class="content">
+                <p class="subtitle">황색 그리스도가 있는 화가의 자화상 </p>
+                <p class="name">폴 고갱</p>
+                <p>'황색의 그리스도'가 있는 화가의 자화상', 폴 고갱, 1890-1891년, 38 x 46 cm, 오르세 미술관</p>
+            </div>
+            <div class="content">
+                <p class="subtitle">오페라좌의 관현악단</p>
+                <p class="name">에드가 드가</p>
+                <p>'오페라좌의 관현악단', 에드가 드가, 1868-1869년, 32 x 46 cm, 오르세 미술관</p>
+            </div>
+            <div class="content">
+                <p class="subtitle">만종</p>
+                <p class="name">장 프랑수아 밀레</p>
+                <p>캔버스에 유채(Huile sur toile)/55.5 x 66 cm, 오르세 미술관</p>
+            </div>
+            <div class="content">
+                <p class="subtitle">제비꽃장식을 단 베르트모리조</p>
+                <p class="name">에두아마르네</p>
+                <p>1872년, 55*38cm, 프랑스 오르세미술관</p>
+            </div>
+        </div>
+        <div class="mright">
+            <div>
+                <h3 style=" color: gray; text-decoration: underline; ">전세계인들에게</h3>
+                <h3 style=" color: orange; text-decoration: underline; ">가장사랑받는</h3>
+                <h3 style=" color: black; ">서양미술사의 시대</h3>
+            </div>
+            <div>
+                <div>
+                    <p><a href="www.naver.com">Workshop Go</a></p>
+                    <p>Life drawing workshop</p>
+                </div>
+                <div>
+                    <p><a href="www.naver.com">Summer exhibition</a></p>
+                    <p>A-level Summer Exhibition Online 2010</p>
+                </div>
+                <div>
+                    <p><a href="www.naver.com">RA Collection</a></p>
+                    <p>RA Collection</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="bottom"></div>
+
+</body>
+</html>

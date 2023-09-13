@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {color:red; /* 폰트 컬로르르 의미 */ }
+        /* * *는 전체 all을 나타냄 */
+        h1 {color:orange;}
+        p {color : blue;}
+        /* 전체를 설정하더라고 좀 더 좁은 범위의 설정이 존재한다면
+        좁은 범위 설정으로 변경됨 */
+
+        #header { background-color: aquamarine;
+                  width: 800px;
+                  margin : 0 auto; /* 위 아래 0, 좌우 auto를 의미함 */
+                }
+        #wrap {
+            background-color: antiquewhite;
+            width: 500px;
+            margin: 0 auto;
+            overflow: hidden; /* overflow : hidden 할 경우 지정한 범위 까지만 보여주고 넘어가는 범위는 안 보여줌*/ 
+        }
+        #aside {
+            width:200px;
+            background-color: blue;
+            float: left; 
+        }
+        #content{
+            width: 600px;
+            background-color: cadetblue;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>제목 글자 태그</h1>
+    <p>긴 내용의 문자열 긴 내용의 문자열 긴 내용의 문자열 긴 내용의 문자열 긴 내용의 문자열 긴 내용의 문자열 긴 내용의 문자열 긴 내용의 문자열 긴 내용의 문자열 </p>
+
+    <div id = "header">
+        <h1>#header 태그</h1>
+    </div>
+    <div id = "wrap">
+        <div id="aside"><h1>#aside 태그</h1></div> <!-- #이  id를 의미 -->
+        <div id="content"><h1>#content 태그</h1></div>
+
+    </div>
+</body>
+</html>
