@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let n = 10;
+        let s = '10';
+
+
+        console.log("== 비교 Start")
+        if(n==s){ // 암시적 형변환에 의해 데이터 같은지 비교
+            console.log('같다');
+        }else {
+            console.log('다르다');
+        }
+
+
+        console.log("=== 비교 Start")
+        if(n===s){  // 데이터의 정확한 비교를 원한다면 ===
+            // 데이터와 자료형까지 같은지 비교
+            console.log('같다');
+        }else {
+            console.log('다르다');
+        }
+
+
+        let b = true;
+        let bs = 'true';
+
+        console.log('String 비교 Start');
+        if(b == bs){
+            console.log('같다');
+        }else {
+            console.log('다르다');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            let input = document.getElementsByName('age');
+            let divs = document.getElementsByTagName('div');
+            /* TagName은 복수개를 가져옴 1개만 가져오고 싶다면 인덱스 번호 부여 */
+            // 복수개로 가져오는 함수는 리턴 타입이 배열임을 꼭 기억하자!!
+            for(let v of input){
+                // console.log(v.value + " : " + v.checked);
+                if(v.checked){
+                    divs[0].innerHTML = v.value;
+                }
+            }
+
+
+            let getName = document.getElementsByName('gender');
+            for(let name of getName){
+                if(name.checked){
+                    console.log(name.value);
+                }
+                
+            }
+
+            
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>나이:</td>
+            <td>
+                <label for="">
+                    <input type="radio" name = "age" value = "young" > 18세 미만
+                </label>
+                <label for="">
+                    <input type="radio" name = "age" value = "mature" checked> 18세 이상, 60세 미만
+                </label>
+                <label for="">
+                    <input type="radio" name = "age" value = "senior"> 60세 이상
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>성별 :</td>
+            <td>
+                <label for="">
+                    <input type="radio" name = "gender" value = "male" checked> 남
+                </label>
+            </td>
+            <td>
+                <label for="">
+                    <input type="radio" name = "gender" value = "female" > 여
+                </label>
+            </td>
+        </tr>
+    </table>
+    <div></div>
+</body>
+</html>

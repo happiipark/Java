@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload =  function(){
+            select.onchange = (e) => {
+                fruit.textContent = e.target.value;
+                // alert(e.target.value);
+            }
+
+            input.oninput = (e) => {
+                console.log(e.target.value)
+            }
+
+
+            let radios = document.querySelectorAll('input[type="radio"]');
+            for(let radio of radios){
+                radio.onchange = (e) => {
+                    // alert(e.target.value);
+                    alert(radio.value);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <select name="" id="select">
+        <option value="apple">사과</option>
+        <option value="banana">바나나</option>
+        <option value="ornage">오렌지</option>
+    </select>
+    <div id="fruit"></div>
+
+    <input type="text" name="" id="input">
+
+    <input type="radio" name="gender" id="" value="male" checked>남
+    <input type="radio" name="gender" id="" value="female">여
+</body>
+</html>

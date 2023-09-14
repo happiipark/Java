@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add(x,y){
+            return x+y;
+        }
+
+        var s = add(10,20);
+        // alert(s);
+
+        var sum = add;
+        var s2 = sum(100,200);
+
+
+        var minus = function(x,y){
+            return x-y;
+        }
+
+        // alert(minus(100,50));
+
+
+
+        // function multi(x,y){
+        //     return x*y;
+        // }
+
+
+        var multi1 = (x,y) => x*y;
+        // => : 람다식(화살표 함수)
+        alert(multi1(10,20));
+        // var multi2 = (x,y) => { return x*y};
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

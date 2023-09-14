@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function handle1(){
+            alert('감사합니다.');
+        }
+        function handle2(){
+            alert('다시 한번 감사합니다.');
+        }
+        window.onload = function() {
+            // elem.onclick = () => alert("안녕하세요?");
+            // elem.addEventListener('click',handle1);
+            // elem.addEventListener('click',handle2);
+
+            elem.addEventListener('click', () => alert('안녕하세요?'));
+        }
+    </script>
+</head>
+<body>
+    <input id="elem" type = "button" value="클릭해주세요"></button>
+</body>
+</html>

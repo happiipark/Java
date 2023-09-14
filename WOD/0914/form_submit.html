@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            form.onsubmit = function (e) {
+                let id = document.getElementById('id');
+                if(id.value.trim().length<4) {
+                    alert('아이디 오류');
+                    e.preventDefault(); 
+                    //e.preventDefault(); : return false;와 비슷하지만
+                    // 다음 문장도 실행 시킨다는 점에서 다르다!
+                    // return false;
+                } 
+
+                let password = document.getElementById('password');
+                if(password.value.trim().length<4) {
+                    alert('비밀번호 오류');
+                    e.preventDefault();
+                    // return false;
+                } 
+                
+                alert("form submit");
+                return false; // 타당성 체크
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form action="test.html" id="form">
+        <input type="text" name="id" id="id" placeholder="아이디"><br>
+        <input type="password" name="password" id="password" placeholder="비밀번호"><br>
+        <input type="checkbox" name="habby" id="book">독서
+        <input type="checkbox" name="habby" id="movie">영화감상
+        <input type="checkbox" name="habby" id="music">음악감상<br>
+        <input type="radio" name="gender" id="" value="male">남
+        <input type="radio" name="gender" id="" value="female">여<br>
+        <input type="submit" value="제출">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () { //
+            /* on이 붙어있는 함수는 자동으로 dom이 모두 생성된 후에 호출된다. */
+            document.querySelector('h2').style.color = 'red';
+            // querySelector : 맨 처음 만나는 태그만 해당함
+            let h1s = document.querySelectorAll('h1');
+            // 만일 여러게에 속성을 부여 하고 싶다면 querySelectorAll 메서드 사용
+            // 반복문을 꼭 사용해야한다
+            for(var h1 of h1s){  //
+                //for( var h1 in h1s) 를 할 경우 키 값을 불러 오는 거라 그냥 단순 반복문에는 어울리지 않음
+                h1.style.backgroundColor = 'red';
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Hello JavaScript</h1>
+    <h1>Hello JavaScript</h1>
+    <h2>Hello jquery</h2>
+</body>
+
+</html>

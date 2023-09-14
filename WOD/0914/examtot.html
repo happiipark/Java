@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        body {
+            font: 13px Arial;
+            background: #aaa;
+        }
+
+        #wrapper {
+            width: 800px;
+            margin: 0 auto;
+            background: #fff;
+        }
+
+        #header {
+            text-align: center;
+            background: #fa0;
+            color: #fff;
+        }
+
+        #container {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+        }
+
+        #container>.sidemenu {
+            width: 200px;
+        }
+
+        #container>.content {
+            width: 400px;
+            background: #ddd;
+            color: #123456;
+        }
+
+        #container>.aside {
+            width: 200px;
+        }
+
+        h1 {
+            font-size: 800%;
+        }
+
+        #header>span {
+            display: block;
+            font-size: 20px;
+            padding-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .stit {
+            background: #ccc;
+            color: #333;
+            padding: 5px;
+        }
+
+        .content li a {
+            display: block;
+            color: #ddd;
+            font: bold 130% Arial;
+            padding: 5px;
+            text-decoration: none;
+            background: #123456;
+        }
+
+        .content li:nth-child(2) {
+            font-weight: bold;
+            font-size: 120%;
+        }
+
+        .sidemenu>li:first-child {
+            font: bold 130% Arial;
+            background: #900;
+            color: #fff;
+        }
+
+        .sidemenu a {
+            color: #000;
+            font-weight: bold;
+        }
+
+        .aside>li:first-child {
+            font: bold 170% Arial;
+            color: #999;
+        }
+
+        .aside>li:first-child .all {
+            text-decoration: underline;
+        }
+
+        .aside>li:first-child .love {
+            color: #fa0;
+            border-bottom: 1px solid #fa0;
+        }
+
+        .aside>li:first-child strong {
+            color: #333;
+            /*border:none;*/
+        }
+
+        .aside a {
+            color: #000;
+            font-weight: bold;
+        }
+
+        .aside span {
+            display: block;
+        }
+
+        li {
+            padding: 10px;
+        }
+
+        address {
+            font: bold normal 100% Arial;
+            padding: 10px;
+            background: #123456;
+            color: #eee;
+            text-align: center;
+        }
+
+        address a {
+            color: #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <h1>Musée d'Orsay</h1>
+            <span>Musée d'Orsay Musée d'Orsay
+                Musée d'Orsay Musée d'Orsay Musée d'Orsay</span>
+            <p class="stit">Royal Academy of Arts, <span>THE REAL VANGOGH
+                </span> THE ARTIST AND HIS LETTERS</p>
+        </div>
+        <div id="container">
+            <ul class="sidemenu">
+                <li>ARTIST</li>
+                <li><a href="#">작가의 작품</a></li>
+                <li><a href="#">작가의 시대</a></li>
+                <li><a href="#">작가의 일생</a></li>
+            </ul>
+            <div class="content">
+                <ul>
+                    <li><a href="#">피리부는 소년</a></li>
+                    <li>에두아르마네</li>
+                    <li>1866 캔버스에 유채, 161*97cm, 파리 오르세 Edouard MANET, Le Fifre, H.T, 161*97cm</li>
+                </ul>
+                <ul>
+                    <li><a href="#">고흐의 방</a></li>
+                    <li class="artist">빈센트반고흐</li>
+                    <li>1889 캔버스에 유채,57.5*74cm,파리 오르세 Vincent Van GOGH,La Chambre de Van Gogh, H/T, 57.5*74cm </li>
+                </ul>
+                <ul>
+                    <li><a href="#">황색 그리스도가 있는 화가의 자화상</a></li>
+                    <li class="artist">폴 고갱</li>
+                    <li>1890-1891 캔버스에 유채,38*46cm,파리 오르세 Paul Gauguin Portrait de I'artiste au Paul Gauguin, H/T,
+                        38*46cm</li>
+                </ul>
+                <ul>
+                    <li><a href="#">오페라좌의 관현악단</a></li>
+                    <li class="artist">에드가 드가</li>
+                    <li>1868-1869 캔버스에 유채,32*46cm,파리 오르세 Edgar Degas, L'orchestre de I'Opera H/T, 38*46cm</li>
+                </ul>
+                <ul>
+                    <li><a href="#">만종</a></li>
+                    <li class="artist">장 프랑수아 밀레</li>
+                    <li>1857-1859 캔버스에 유채,55.5*66cm,파리 오르세 Jean-Franqois Millet, L'Angelus H/T, 55.5*66cm</li>
+                </ul>
+                <ul>
+                    <li><a href="#">제비꽃장식을 단 베르트모리조</a></li>
+                    <li class="artist">에두아르마네</li>
+                    <li>1872 Eduouard Manet Berthe Morisot au bouquet de H/T, 55*38cm</li>
+                </ul>
+
+            </div>
+
+            <ul class="aside">
+                <li><span class="all">전세계인들에게</span><span class="love">제일 사랑받는</span><strong>서양미술사의 시대</strong></li>
+                <li><a href="#">Workshop Go</a> <span>Life drowing workshop</span></li>
+                <li><a href="#">Summer exhibition</a> <span>A-level Summer Exibition Online 2010</span></li>
+                <li><a href="#">RA collection</a> <span>RA Collections</span></li>
+            </ul>
+        </div>
+
+        <div id="footer">
+            <address>© 2012 Les Amis du Musée d'Orsay. All rights reserved.
+                <a href="#">amis@amis-musee-orsay.org</a>
+                <span>Legal status</span>
+            </address>
+        </div>
+
+    </div>
+</body>
+
+</html>

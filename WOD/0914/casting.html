@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //문자열 형변환 : String()
+        let n = 10;
+        let sn = String(n);
+        console.log(typeof sn);  //string
+
+        let b= true;
+        let sb = String(b);
+        console.log(sb);  // true
+        console.log(typeof sb);  //string
+
+        //숫자로 형변환 : Number()
+        let ns = "123";
+        let nn = Number(ns);
+        // alert(nn);
+        // alert(typeof nn);
+
+        ns = "123z";
+        // nn = Number(ns);
+        // alert(typeof nn);
+
+        let bn = Number(b); // b : true  ==> 1
+        // alert(bn);  // 1출력
+        // alert(typeof bn);   // number
+        b = false;
+        bn = Number(b); // b: flase ==> 0
+        // alert(bn);   // 0 출력
+
+        //불린형으로 형변환 : Boolean()
+        // 숫자형을 불린형으로 
+        let nb = Boolean(1); // 0 이 아닌 모든 값들은 true로 변환
+        // document.write(nb); // true
+        // document.write(typeof nb);  // bolean
+        nb = Boolean(0); // 0값은 false
+        // document.write(nb); // true
+
+        //문자형 -> 불린형
+
+        let ssb = Boolean('hong');
+        // document.write(ssb);
+        // document.write(typeof ssb);
+        ssb = Boolean('0');
+        // document.write(ssb);
+
+        ssb = Boolean(''); // 빈 문자열만 fasle로 변환, space 가 있으면 값으로 봐서 true로 나옴
+        // document.write(ssb);
+
+        let obj = {A:'aaa'};
+        // document.write(Boolean(obj)); // true
+        obj = {};
+        // document.write(Boolean(obj)); // true
+        let arr = [];
+        // document.write(Boolean(arr)); // true
+
+        // null -> Boolean
+        // document.write(Boolean(null));
+
+
+        let v;
+        // document.write(v);
+        // document.write(Boolean(v));
+
+        document.write(Boolean(NaN));
+
+        // 형변환시 false Case
+        // 0, null, '', undefined, NaN
+        // 주의 : '0', ' '는 true로 변환된다.
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
