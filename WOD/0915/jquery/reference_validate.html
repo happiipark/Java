@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        // 타당성 체크 한글 입력(스페이스도 안됨)
+        $(function(){
+            $('form').submit(function(e){
+                var value = $('input').val(); 
+                if(value.replace(/[ㄱ-ㅎ,가-힣]/g,'').length==0){ 
+                    // 한글을 다 지우고 한글 이외 글자만 남기는 방법
+                    // /[ㄱ-ㅎ,가-힣,a-z,A-Z,0-9]/ 특수기호만 제외
+                    alert("과정을 진행합니다.");
+                } else{
+                    alert("한글 이름을 입력하세요");
+                    e.preventDefault();
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <form action="/login">
+        <label for="">이름</label>
+        <input type="text" name="" id="">
+        <input type="submit" value="제출">
+    </form>
+</body>
+</html>

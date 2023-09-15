@@ -1,8 +1,13 @@
 -- 1.
-SELECT pr.pdname 제품카테고리, pr.pdsubname 제품명, fa.facname 공장명, se.stoname 판매점명, ifnull(sk.stamount,0) 판매점재고수량
-FROM stock sk JOIN product pr USING(pdno)
-	JOIN factory fa USING(factno)
-	JOIN store se USING(stono)	
+SELECT pr.pdname 제품카테고리
+     , pr.pdsubname 제품명
+	 , fa.facname 공장명
+	 , se.stoname 판매점명
+	 , ifnull(sk.stamount,0) 판매점재고수량
+FROM stock sk 
+JOIN product pr USING(pdno)
+JOIN factory fa USING(factno)
+JOIN store se USING(stono)	
 WHERE ifnull(sk.stamount,0)=0 AND fa.facloc='SEOUL'
 ORDER BY 1;
 
@@ -15,7 +20,9 @@ WHERE f.facloc='SEOUL'
 ORDER BY 1;	
 
 -- 2.
-SELECT pdsubname, pdcost, pdprice
+SELECT pdsubname
+     , pdcost
+	 , pdprice
 FROM product
 WHERE pdcost >ANY (SELECT pdcost from product WHERE pdname='TV')
 AND pdcost <ANY (SELECT pdcost from product WHERE pdname='CELLPHONE')

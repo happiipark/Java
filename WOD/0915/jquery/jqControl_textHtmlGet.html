@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(function(){
+            var text = $('div').text();
+            var html = $('div').html();
+
+            console.log(text)
+            console.log(html)
+
+
+            $('body').append(`<p>text: ${text}</p>`);
+            $('body').append(`<p>html: ${html}</p>`);
+        })
+    </script>
+</head>
+<body>
+    <div><h1>Header - 0</h1></div>
+    <div><h1>Header - 1</h1></div>
+</body>
+</html>

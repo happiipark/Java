@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(function(){
+            $('#jumin1').keyup(function(){// keyup은 키를 누루고 나서 바로
+            // $('#jumin1').keydown(function(){ //keydown은 키를 누르고 다음 키를 누를경우
+                if($(this).val().length>=6){
+                    $('#jumin2').focus();
+                }
+            })
+
+            $('#jumin2').keyup(function(e){
+                if(e.keyCode==8 && $(this).val().length==0){
+                    $('#jumin1').focus();
+                }
+            })
+
+            $('.jumin').keydown(function(e){
+                if(!(e.keyCode>=48 && e.keyCode<=57) || e.keyCode == 8) return false;
+                console.log(e.keyCode);
+            })
+
+            $('#name').keydown(function(e){
+                console.log(e.keyCode);
+                if(!(e.keyCode == 299 || e.keyCode == 8)) return false;
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="text" class = "jumin" name="" id="jumin1" maxlength="6">
+    <span>-</span>
+    <input type="password" class = "jumin" name="" id="jumin2" maxlength="7"><br>
+    <label for="name">이름</label>
+    <input type="text" name="name" id="name">
+</body>
+</html>
