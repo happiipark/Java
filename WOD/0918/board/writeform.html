@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0 auto
+        }
+
+        #header {
+            display: flex;
+
+        }
+
+        #bottom {
+            text-align: center;
+        }
+
+        .th {
+            background-color: orange;
+            text-align: left;
+        }
+
+        .td {
+            width: auto;
+            background-color: rgb(75, 152, 224);
+        }
+
+        .btn {
+            display: inline-block;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(function(){
+            var getVal = $('.th:nth-chird(4)').val();
+            if(getVal != null){
+                getVal = `<tr>
+                            <th class="th">이미지</th>
+                            <td class="td"><input type="file" name="" id=""></td>
+                         </tr>`
+            }
+        })
+    </script>
+</head>
+
+<body>
+    <div id="header">
+        <h1>게시판글등록</h1>
+    </div>
+
+    <div>
+        <table border="1px" ">
+            <tr>
+                <th class="th">글쓴이</th>
+                <td class="td"><input type="text" name="" id=""></td>
+
+            </tr>
+            <tr>
+                <th class="th">저자</th>
+                <td class="td"><input type="text" name="" id=""></td>
+
+            </tr>
+            <tr>
+                <th class="th">내용</th>
+                <td class="td" colspan="2"><textarea name="" id="" cols="40" rows="10"></textarea></td>
+
+            </tr>
+            <tr>
+                <th class="th">이미지 파일 첨부</th>
+                <td class="td"><input type="file" name="" id=""></td>
+            </tr>
+
+        </table>
+    </div>
+    <div id="bottom">
+        <button type="button" class="btn">등록</button>
+        <button type="button" class="btn">다시쓰기</button>
+    </div>
+
+
+</body>
+
+</html>
