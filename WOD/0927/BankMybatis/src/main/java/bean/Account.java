@@ -20,9 +20,13 @@ public class Account {
 			balance += money;
 		}
 	}
-	public void withdraw(Integer money) {
+	public void withdraw(Integer money) throws Exception {
 		if(balance>=money) {
 			balance -= money;
+		} else {
+			throw new Exception("잔액이 부족합니다.");
+			
+			
 		}
 	}
 	public String getId() {

@@ -14,4 +14,17 @@
 	select * from account where id = #{id}
 	]]>
 	</select>
+	
+	<update id="updateBalance" parameterType="Account">
+	<![CDATA[
+	update account set balance = #{balance} where id = #{id}
+	]]>
+	</update>
+	
+	
+	<select id="selectAccountList" resultType="Account">
+	<![CDATA[
+	select * from account order by id
+	]]>
+	</select>
 </mapper>

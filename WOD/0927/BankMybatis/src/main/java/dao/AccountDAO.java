@@ -1,5 +1,7 @@
 package dao;
 
+import java.util.List;
+
 import bean.Account;
 
 public interface AccountDAO {
@@ -8,5 +10,7 @@ public interface AccountDAO {
 
 	Account selectAccount(String id) throws Exception;
 		
+	void updateBalance(Account acc) throws Exception;
 	
+	List<Account> selectAccountList() throws Exception;
 }

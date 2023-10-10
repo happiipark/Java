@@ -7,22 +7,23 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-import bean.Account;
-import service.AccountService;
-import service.AccountServiceImpl;
+import bean.Member;
+import service.MemberService;
+import service.MemberServiceImpl;
 
 /**
- * Servlet implementation class MakeAccount
+ * Servlet implementation class Login
  */
-@WebServlet("/makeaccount")
-public class MakeAccount extends HttpServlet {
+@WebServlet("/login")
+public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public MakeAccount() {
+    public Login() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -31,30 +32,32 @@ public class MakeAccount extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("makeaccount.jsp").forward(request, response);
+		request.getRequestDispatcher("login.jsp").forward(request, response);
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("UTF-8");
+		request.setCharacterEncoding("utf-8");
 		String id = request.getParameter("id");
-		String name = request.getParameter("name");
-		Integer balance = Integer.parseInt(request.getParameter("money"));
-		String type = request.getParameter("type");
-		String grade = request.getParameter("grade");
-		
-		Account acc = new Account(id,name,balance,type,grade);
+		String password = request.getParameter("password");
+		HttpSession session = request.getSession();
 		try {
-			AccountService  accountService= new AccountServiceImpl();
-			accountService.makeAccount(acc);
-			request.setAttribute("acc", acc);
-			request.getRequestDispatcher("accountinfo.jsp").forward(request, response);
+			MemberService memberService = new MemberServiceImpl();
+			Member member = memberService.login(id, password);
+			if(member != null) {
+				if(member.getPassword() == password) {
+					session.setAttribute("user", member);
+					request.setAttribute("member", member);
+					request.getRequestDispatcher("main.jsp").forward(request, response);
+				} else {
+					request.setAttribute("err", "비밀번호 오류!");
+					request.getRequestDispatcher("error,jsp").forward(request, response);
+				}
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			request.setAttribute("err", "계좌개설 실패");
-			request.getRequestDispatcher("error.jsp").forward(request, response);
 		}
 	}
 

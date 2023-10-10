@@ -8,21 +8,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bean.Account;
 import service.AccountService;
 import service.AccountServiceImpl;
 
 /**
- * Servlet implementation class MakeAccount
+ * Servlet implementation class Deposit
  */
-@WebServlet("/makeaccount")
-public class MakeAccount extends HttpServlet {
+@WebServlet("/deposit")
+public class Deposit extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public MakeAccount() {
+    public Deposit() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -31,29 +30,23 @@ public class MakeAccount extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("makeaccount.jsp").forward(request, response);
+		request.getRequestDispatcher("deposit.jsp").forward(request, response);
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("UTF-8");
+		request.setCharacterEncoding("utf-8");
 		String id = request.getParameter("id");
-		String name = request.getParameter("name");
-		Integer balance = Integer.parseInt(request.getParameter("money"));
-		String type = request.getParameter("type");
-		String grade = request.getParameter("grade");
-		
-		Account acc = new Account(id,name,balance,type,grade);
+		Integer money = Integer.parseInt(request.getParameter("money"));
 		try {
-			AccountService  accountService= new AccountServiceImpl();
-			accountService.makeAccount(acc);
-			request.setAttribute("acc", acc);
-			request.getRequestDispatcher("accountinfo.jsp").forward(request, response);
-		} catch (Exception e) {
+			AccountService accountService = new AccountServiceImpl();
+			accountService.deposit(id, money);
+			response.sendRedirect("accountinfo");
+		} catch(Exception e) {
 			e.printStackTrace();
-			request.setAttribute("err", "계좌개설 실패");
+			request.setAttribute("err", e.getMessage());
 			request.getRequestDispatcher("error.jsp").forward(request, response);
 		}
 	}
