@@ -129,33 +129,38 @@ button{
 
 .idbtn>input{
   width:57px;
-  height: 36px;}
+  height: 36px;
+  color: #2188C4;
+  border-radius: 10px;
+  float: left;
+  text-align: left;
+    
+}
 
 .cancel{
   background-color: grey;
   border-radius: 10px;
   margin-left: -50px;
+  width: 57px;
+  height: 36;
+  text-align: left;
+  
 }
 
 #famlist{
   background: white;
 }
 
-#famlist>button{
-  background:  white;
+
+#famlist>input{
+  color: #2188C4;
   border-radius: 10px;
   margin-left: 260px;
+  width: 57px;
+  height: 36px;
+  text-align: left;
 }
 
-#famlist>button>h4>a{
-  color: #2188C4;
-}
-
-#famlist input{
-  height: 30px;
-  font-size: 12px;
-  width: 100px;
-}
 
 .reg{
   border-radius: 10px;
@@ -169,7 +174,7 @@ button{
   width: 320px;
   padding: 10px;
   background-color: white;
-  margin: 10  auto;
+  margin: 10 auto;
   text-align: left;
 }
 
@@ -189,12 +194,13 @@ button{
 
 table{
   border-radius: 10px;
-  width: 300px; 
+  width: 350px; 
+  height: 90;
 }
 
 
 table span{
-  font-size: 13px;
+  font-size: 1px;
 }
 
 table tr td:nth-child(1){
@@ -226,7 +232,7 @@ table tr td:nth-child(1){
    <div id="container">
     <div id="famallymanage">
       <span style="text-align: left; margin:10px 0 10px 10px">가족관리</span>
-      <span class="material-symbols-outlined" onClick="history.go(-1)" style="margin-left: 310px;">
+      <span class="material-symbols-outlined" onClick="history.go(-1)" style="margin-left: 280px;">
         arrow_back
         </span> 
         <br>
@@ -242,11 +248,13 @@ table tr td:nth-child(1){
         <input type="text" id="idnum" placeholder="-없이 숫자만 입력" required="" >
         <br>
         <div class="idbtn">
-        <button class="reg" type="submit">
-          <h4>등록</h4></button> 
+          <input calss="reg" type="submit" value="등록" style="text-align: left;">
+        <!-- <button class="reg" type="submit">
+          <h4>등록</h4></button>  -->
       </div>
       </form>
-      <button class="cancel" onclick="cancel"><h4>취소</h4></button>
+      <input class="cancel" type="button" value="취소" onclick="cancel">
+      <!-- <button class="cancel" onclick="cancel"><h4>취소</h4></button> -->
       <br>
       
     </div>
@@ -317,7 +325,8 @@ table tr td:nth-child(1){
         </table>
       </div>
       
-      <button><h4><a href="modifamally.html">수정</a></h4></button>
+      <input type="button" value="수정" onClick="location.href='modifamally.html'">
+      <!-- <button><h4><a href="modifamally.html">수정</a></h4></button> -->
     </div>
    </div>
 

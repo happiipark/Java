@@ -8,6 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <script
    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link rel="stylesheet"
@@ -78,25 +79,6 @@ a {
    background-color: #0056b3;
 }
 
-
-.modibtn button{
-  margin-top: 10px;
-  width: 70px;
-  height: 30px;
-  border: solid 1px;
-  border-radius: 20px;
-  background: white;
-  margin-left: 270px;
-  float: left;
-  
-}
-
-
-.modibtn h5 a{
-  color: #2188C4;
-  font-size: 17px;
-}
-
 #container {
   background-color: white;
   margin: 10px  auto;
@@ -116,24 +98,61 @@ table{
   height: auto;
 }
 
+.modibtn>input{
+  width: 52;
+  height: 36px;
+  border-radius: 10px;
+  color: #2188C4;
+  font-size: 17px;
+  text-align: left;
+  margin-left: 380px;
+}
+
 #out{
   margin-top: 10px;
-  margin-left: 330;
 }
 
-#out button{
-  width: 70px;
-  height: 30px;
-  background-color: rgb(205, 199, 199);
-  color: black;
-  border-radius: 20px;
-  font-size: 17pt;
+#out>input{
+  width: 80px;
+  height: 36px;
+  background-color: #363A3E;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  
 }
 
-#out>button>h5{
-  font-size: 17px;
+#out>button{
+  width: 80px;
+  height: 36px;
+  background-color: #363A3E;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  
 }
 
+input{
+    height: 40px;
+    width: 70%;
+    margin: 10px 20px;
+    border: 1px solid #16151562;
+    border-radius: 4px;
+    background: #ffffff;
+    /* padding-left: 5px; */
+    /* Noto Sans 폰트 설정 */
+    font-size: 12pt;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: black;
+    text-indent: 0.5em;
+}
+
+.col{
+  text-align: left;
+  margin-left: 65px;
+}
 
 
 </style>
@@ -174,14 +193,22 @@ table{
 
 
    <div id="sub">
-    
-    
+    <span>내 정보</span> 
+    <span class="material-symbols-outlined" onClick="history.go(-1)" style="margin-left: 260px;">
+      arrow_back
+      </span> 
+    <br>
     <hr>
+  </div>
+
+  <div class="modibtn">
+    <input type="button" value="수정" onclick="location.href='modiprofile.html'">
+    <!-- <button><h5><a href="modiprofile.html">수정</a></h5></button> -->
   </div>
 
 
    <div id="container">
-    <div>
+    <!-- <div>
     <table border="1px">
       <tr>
         <td colspan="2">
@@ -216,7 +243,7 @@ table{
 
     </table>
 
-    </div>
+    </div> -->
     <!-- <div>
       <p>
         <span>이름 </span>  <span>홍길동</span>
@@ -239,10 +266,20 @@ table{
       </p>
     </div> -->
 
-    <div class="modibtn">
-      <button><h5><a href="modiprofile.html">수정</a></h5></button>
+    <div>
+      <p class="col">이름</p>
+      <p><input type="text" id="pname" value="홍길동" disabled="flase"></p>
+      <p class="col">전화번호</p>
+      <p><input type="text" id="tel"  value="010-1234-5678" disabled="flase"  ></p>
+      <p class="col">이메일</p>
+      <p><input type="text" id="address"value="kosta@gmail.com" disabled="false"></p>
+      <p class="col">주소</p>
+      <p><input type="text" id="idnum" value="서울특별시 금천구" disabled="false" ></p>
     </div>
+
+   
     <div id="out">
+      <!-- <input type="button" value="회원탈퇴" onclick="out()"> -->
       <button onclick="out()"><h5>회원탈퇴</h5></button>
      </div>
    </div>

@@ -88,29 +88,17 @@ a {
   font-size: 22px;
 }
 
-#famallymanage>input{
-  width: 30px;
-height: 30px;
-margin-left: 280px;
-}
 
-
-button{
-  margin: 10 auto;
-  width: 57;
-  height: 36;
-  text-align: center;  
-}
-
-button{
-  background: white;
-  color: #2188C4;
-  border-radius: 10px;
+input{
+  width: 57px;
+  height: 36px;
+  border-radius: 10px; 
 }
 
 .delete{
-  background-color: grey;
+  background: grey;
   color: black;
+  border: 1px solid #16151562;
 }
 
 
@@ -118,14 +106,12 @@ button{
   margin-top: 10px;
 }
 
-#famlist>button{
-  margin-left: 260px;
-}
 
-#famlist>button>h4>a{
-  color: black;
+#famlist>input{
+  background: white;
+  color: #2188C4;
+  border: 1px solid #16151562;
 }
-
 #detailfam{
   width: 320px;
   height: auto;
@@ -197,7 +183,7 @@ table tr td:nth-child(1){
    <div id="container">
     <div id="famallymanage">
       <span style="text-align: left; margin:10px 0 10px 10px">가족관리</span>
-      <span class="material-symbols-outlined" onClick="history.go(-1)" style="margin-left: 310px;">
+      <span class="material-symbols-outlined" onClick="history.go(-1)" style="margin-left: 300px;">
         arrow_back
         </span> 
       <hr>
@@ -212,7 +198,8 @@ table tr td:nth-child(1){
                 <span><textarea name="" id="" cols="20">김길동</textarea></span>
               </td>
               <td rowspan="4" colspan="3">
-                <button class="delete" onclick="deletefam()"><h4>삭제</h4></button>
+                <input class="delete" type="button" value="삭제" onclick="deletefam()">
+                <!-- <button class="delete" onclick="deletefam()"><h4>삭제</h4></button> -->
               </td>
             </tr>
 
@@ -246,7 +233,8 @@ table tr td:nth-child(1){
                 <span><textarea name="" id="" cols="20">박길동</textarea></span>
               </td>
               <td rowspan="4" colspan="3">
-                <button class="delete" onclick="deletefam()"><h4>삭제</h4></button>
+                <input class="delete" type="button" value="삭제" onclick="deletefam()">
+                <!-- <button class="delete" onclick="deletefam()"><h4>삭제</h4></button> -->
               </td>
             </tr>
 
@@ -280,7 +268,8 @@ table tr td:nth-child(1){
                 <span><textarea name="" id="" cols="20">홍길동</textarea></span>
               </td>
               <td rowspan="4" colspan="3">
-                <button class="delete" onclick="deletefam()"><h4>삭제</h4></button>
+                <input class="delete" type="button" value="삭제" onclick="deletefam()">
+                <!-- <button class="delete" onclick="deletefam()"><h4>삭제</h4></button> -->
               </td>
             </tr>
 
@@ -314,7 +303,8 @@ table tr td:nth-child(1){
                 <span><textarea name="" id="" cols="20">신길동</textarea></span>
               </td>
               <td rowspan="4" colspan="3">
-                <button class="delete" onclick="deletefam()"><h4>삭제</h4></button>
+                <input class="delete" type="button" value="삭제" onclick="deletefam()">
+                <!-- <button class="delete" onclick="deletefam()"><h4>삭제</h4></button> -->
               </td>
             </tr>
 
@@ -338,8 +328,8 @@ table tr td:nth-child(1){
           </table>
         </div>
   
-        
-        <button onclick="modi()"><h4>수정</h4></button>
+        <input type="button" value="수정" onclick="modi()">
+        <!-- <button onclick="modi()"><h4>수정</h4></button> -->
       </div>
       <br>
       
