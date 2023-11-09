@@ -16,3 +16,6 @@
 - Client : 보호된 자원을 사용하려고 접근 요청을 하는 애플리케이션
 - Resource Server : 사용자의 보호된 자원을 호스팅하는 서버
 - Autorization Server : 권한 서버. 인증/인가를 수행하는 서버로 클라이언트의 접근 자격을 확인하고  AccessToken을 발급하는 권한을 부여하는 역할
+
+
+Uploading OAuth2.png…
