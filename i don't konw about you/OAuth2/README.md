@@ -18,4 +18,4 @@
 - Autorization Server : 권한 서버. 인증/인가를 수행하는 서버로 클라이언트의 접근 자격을 확인하고  AccessToken을 발급하는 권한을 부여하는 역할
 
 
-Uploading OAuth2.png…
+<img src = "https://github.com/happiipark/KOSTA_STUDY/issues/10#issue-1984649528" width="500" height="400"/>
