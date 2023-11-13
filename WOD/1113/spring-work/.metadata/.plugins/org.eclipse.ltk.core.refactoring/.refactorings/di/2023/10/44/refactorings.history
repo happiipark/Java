@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;DiApplication.java&apos; to &apos;di/src/main/java/com.kosta.di.sample1&apos;&#x0D;&#x0A;- Original project: &apos;di&apos;&#x0D;&#x0A;- Destination element: &apos;di/src/main/java/com.kosta.di.sample1&apos;&#x0D;&#x0A;- Original element: &apos;com.kosta.di.DiApplication.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.kosta.di.sample1" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.kosta.di{DiApplication.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1698735341937" units="1" version="1.0"/>
+</session>
